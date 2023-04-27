@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Error Messages
 
-Error can be raised in several places. The error message is always send back to the client with the message type of the original message. The error message is a JSON array with the following format:
+Error messages are always sent back to the client with the message type of the original message. The error message is a JSON array with the following format:
 
 ```json
 [ ERROR, MsgType, RequestID, ErrorCode ]
@@ -33,7 +33,7 @@ Currently it is not possible to add details to the error message. This will be a
 
 ## Invalid Message
 
-The error message is send if the client sends an invalid message.
+The error message is sent if the client sends an invalid message.
 
 ```json
 [ ERROR, 0, 0, "olink.error.invalid_message" ]
@@ -41,7 +41,7 @@ The error message is send if the client sends an invalid message.
 
 ## Invalid Message Type
 
-The error message is send if the client sends an invalid message type.
+The error message is sent if the client sends an invalid message type.
 
 ```json
 [ ERROR, 0, 0, "olink.error.invalid_message_type" ]
@@ -49,13 +49,13 @@ The error message is send if the client sends an invalid message type.
 
 ## No Such Module
 
-The error message is send if the client tries to link to a non existing module.
+The error message is sent if the client tries to link to a non existing module.
 
 ```json
 [ ERROR, LINK, 0, "olink.error.no_such.module" ]
 ```
 
-This error can also be send during an unlink operation if the module is not linked.
+This error can also be sent during an unlink operation if the module is not linked.
 
 ```json
 [ ERROR, UNLINK, 0, "olink.error.no_such.module" ]
@@ -63,13 +63,13 @@ This error can also be send during an unlink operation if the module is not link
 
 ## No Such Object
 
-The error message is send if the client tries to link to a non existing object.
+The error message is sent if the client tries to link to a non existing object.
 
 ```json
 [ ERROR, LINK, 0, "olink.error.no_such.object" ]
 ```
 
-This error can also be raised during an unlink operation if the object does not exists.
+This error can also be sent during an unlink operation if the object does not exists.
 
 ```json
 [ ERROR, UNLINK, 0, "olink.error.no_such.object" ]
@@ -77,7 +77,7 @@ This error can also be raised during an unlink operation if the object does not 
 
 ## No Such Property
 
-The error message is send if the client tries to set a property on a non existing property.
+The error message is sent if the client tries to set a property on a non existing property.
 
 ```json
 [ ERROR, SET_PROPERTY, 0, "olink.error.no_such.property" ]
@@ -85,7 +85,7 @@ The error message is send if the client tries to set a property on a non existin
 
 ## No Such Operation
 
-The error message is send if the client tries to invoke a non existing operation.
+The error message is sent if the client tries to invoke a non existing operation.
 
 ```json
 [ ERROR, INVOKE, 0, "olink.error.no_such.operation" ]
